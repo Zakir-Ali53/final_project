@@ -45,11 +45,10 @@ searchBtn.addEventListener('click', () => {
         matchedResults = travelRecommendations.beaches;
     } else if (query.includes('temple')) {
         matchedResults = travelRecommendations.temples;
-    } else if (query.includes('country') || query.includes('australia') || query.includes('japan')) {
+    } else if (query.includes('country')) {
+        // Return recommendations for all countries (Australia and Japan)
         travelRecommendations.countries.forEach(country => {
-            if (country.name.toLowerCase().includes(query)) {
-                matchedResults.push(...country.cities);
-            }
+            matchedResults.push(...country.cities);
         });
     } else {
         // Search across all cities, temples, and beaches
@@ -87,7 +86,7 @@ searchBtn.addEventListener('click', () => {
             resultsContainer.appendChild(card);
         });
     } else {
-        resultsContainer.innerHTML = `<p style="color: white; font-weight: bold; text-align: center; width: 100%;">No recommendations found for "${query}". Try searching for 'beach', 'temple', or 'Australia'.</p>`;
+        resultsContainer.innerHTML = `<p style="color: white; font-weight: bold; text-align: center; width: 100%;">No recommendations found for "${query}". Try searching for 'beach', 'temple', or 'country'.</p>`;
     }
 });
 
