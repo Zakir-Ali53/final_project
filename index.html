@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">TravelExplore</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <!-- Search Bar in Navbar or Hero section -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter a destination or keyword...">
+            <button id="searchBtn">Search</button>
+            <button id="clearBtn">Clear</button>
+        </div>
+    </nav>
+
+    <!-- Hero / Content Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Explore The World With Us</h1>
+            <p>Immerse yourself in breathtaking cultures, discover hidden gems, and embark on unforgettable journeys. Your next great adventure starts here.</p>
+            <button class="book-btn">Book Now</button>
+        </div>
+        
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Instagram</a>
+            <a href="#" target="_blank">Twitter</a>
+        </div>
+    </header>
+
+    <!-- Results Section (Dynamic) -->
+    <section id="resultsContainer" class="results-container">
+        <!-- Search results will appear here dynamically via JavaScript -->
+    </section>
+
+    <script src="./app.js"></script>
+</body>
+</html>
